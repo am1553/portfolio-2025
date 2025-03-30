@@ -42,12 +42,15 @@ function Footer() {
           <div className="flex flex-col gap-4">
             <span className="text-display-large opacity-60">Let's Connect</span>
             <div className="flex items-center justify-center gap-4">
-              <button>
+              <a
+                href="https://www.linkedin.com/in/aryanmehta-dev"
+                target="_blank"
+              >
                 <LinkedInIcon style={{ fontSize: "32px" }} />
-              </button>
-              <button>
+              </a>
+              <a href="https://github.com/am1553" target="_blan">
                 <GitHubIcon style={{ fontSize: "30px" }} />
-              </button>
+              </a>
             </div>
           </div>
         </div>
