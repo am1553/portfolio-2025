@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@theme {
+  --font-roboto: "Roboto", sans-serif;
+  --font-jet-brains-mono: "JetBrains Mono", monospace;
+  --color-primary: #27174e;
+  --color-surface-tint: #65558f;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #493971;
+  --color-on-primary-container: #ffffff;
+  --color-secondary: #27174e;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #493971;
+  --color-on-secondary-container: #ffffff;
+  --color-tertiary: #420e24;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #6b2f45;
+  --color-on-tertiary-container: #ffffff;
+  --color-background: #fdf7ff;
+  --color-on-background: #1d1b20;
+  --color-surface: #fdf7ff;
+  --color-on-surface: #000000;
+  --color-surface-variant: #e6e0ec;
+  --color-on-surface-variant: #25232b;
+  --color-dark-background: #141218;
+  --color-on-dark-background: #e6e0e9;
+
+  /* DISPLAY LARGE */
+  --text-display-large: 57px;
+  --text-display-large--line-height: 64px;
+  --text-display-large--letter-spacing: -0.25px;
+  --text-display-large--font-weight: 400;
+  /* DISPLAY MEDIUM */
+  --text-display-medium: 45px;
+  --text-display-medium--line-height: 52px;
+  --text-display-medium--letter-spacing: 0px;
+  --text-display-medium--font-weight: 400;
+  /* DISPLAY SMALL */
+  --text-display-small: 36px;
+  --text-display-small--line-height: 44px;
+  --text-display-small--letter-spacing: 0px;
+  --text-display-small--font-weight: 400;
+
+  /* HEADLINE LARGE */
+  --text-headline-large: 32px;
+  --text-headline-large--line-height: 40px;
+  --text-headline-large--letter-spacing: -0.25px;
+  --text-headline-large--font-weight: 400;
+  /* HEADLINE MEDIUM */
+  --text-headline-medium: 28px;
+  --text-headline-medium--line-height: 36px;
+  --text-headline-medium--letter-spacing: 0px;
+  --text-headline-medium--font-weight: 400;
+  /* HEADLINE SMALL */
+  --text-headline-small: 24px;
+  --text-headline-small--line-height: 32px;
+  --text-headline-small--letter-spacing: 0px;
+  --text-headline-small--font-weight: 400;
+
+  /* BODY LARGE */
+  --text-body-large: 16px;
+  --text-body-large--line-height: 24px;
+  --text-body-large--letter-spacing: 0.5px;
+  --text-body-large--font-weight: 400;
+  /* BODY MEDIUM */
+  --text-body-medium: 14px;
+  --text-body-medium--line-height: 20px;
+  --text-body-medium--letter-spacing: 0.25px;
+  --text-body-medium--font-weight: 400;
+  /* BODY SMALL */
+  --text-body-small: 12px;
+  --text-body-small--line-height: 16px;
+  --text-body-small--letter-spacing: 0.4px;
+  --text-body-small--font-weight: 400;
+
+  /* LABEL LARGE */
+  --text-label-large: 14px;
+  --text-label-large--line-height: 20px;
+  --text-label-large--letter-spacing: 0.1px;
+  --text-label-large--font-weight: 400;
+  /* LABEL MEDIUM */
+  --text-label-medium: 12px;
+  --text-label-medium--line-height: 16px;
+  --text-label-medium--letter-spacing: 0.5px;
+  --text-label-medium--font-weight: 400;
+  /* LABEL SMALL */
+  --text-label-small: 11px;
+  --text-label-small--line-height: 16px;
+  --text-label-small--letter-spacing: 0.5px;
+  --text-label-small--font-weight: 400;
+
+  /* TITLE LARGE */
+  --text-title-large: 22px;
+  --text-title-large--line-height: 28px;
+  --text-title-large--letter-spacing: 0px;
+  --text-title-large--font-weight: 400;
+  /* TITLE MEDIUM */
+  --text-title-medium: 16px;
+  --text-title-medium--line-height: 24px;
+  --text-title-medium--letter-spacing: 0.15px;
+  --text-title-medium--font-weight: 400;
+  /* TITLE SMALL */
+  --text-title-small: 14px;
+  --text-title-small--line-height: 20px;
+  --text-title-small--letter-spacing: 0.1px;
+  --text-title-small--font-weight: 400;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+section {
+  @apply py-20 md:py-30;
+}
+
+.custom-border {
+  position: relative; /* Make room for the pseudo-element */
+  /* Other styling as needed */
+}
+
+.custom-border::before {
+  content: "";
+  position: absolute;
+  top: -1px; /* Adjust these values to match your border width */
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  pointer-events: none; /* Allows clicks through the pseudo-element */
+  background: repeating-linear-gradient(
+    to bottom,
+    #00000010,
+    /* Dash color with slight opacity */ #00000010 10px,
+    /* Dash length */ transparent 10px,
+    /* Start gap */ transparent 20px /* End gap */
+  );
+  mix-blend-mode: difference; /* Inverts the pseudo-element relative to the background */
+}
+
+.menu-active,
+.nav-bar {
+  animation: fade 250ms ease-in;
+}
+
+.nav-bar > nav {
+  animation: navPanel 250ms ease-in;
+}
+
+.nav-bar {
+  overflow: hidden;
+}
+
+li {
+  list-style-type: none;
+}
+
+.income-card {
+  animation: incomeCardAnimate 5s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+}
+
+.finance-card {
+  animation: financeCardAnimate 500ms ease-in;
+}
+
+.settings-animate {
+  animation: settingsAnimation 5s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes settingsAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes financeCardAnimate {
+  0% {
+    transform: scale(0.4);
+    opacity: 0;
+    transform-origin: bottom left;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    transform-origin: bottom left;
+  }
+}
+
+@keyframes incomeCardAnimate {
+  0% {
+    transform: scale(100%);
+  }
+  50% {
+    transform: scale(120%);
+    box-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)),
+      0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  }
+
+  100% {
+    transform: scale(100%);
+  }
+}
+
+@keyframes navPanel {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 256px;
+  }
+}
+
+@media (width > 760px) {
+  body {
+    font-size: 1.25rem;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
