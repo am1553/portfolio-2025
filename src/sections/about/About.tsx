@@ -7,7 +7,10 @@ import MobileFrontend from "../../components/MobileFrontend";
 
 function About() {
   return (
-    <section className="relative w-full before:absolute before:inset-0 before:-z-10">
+    <section
+      className="relative w-full before:absolute before:inset-0 before:-z-10"
+      id="about"
+    >
       <Layout className="flex flex-col gap-80">
         <DesktopFrontend className="max-xl:hidden" />
         <DesktopBackend className="max-xl:hidden" />

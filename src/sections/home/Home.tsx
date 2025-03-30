@@ -2,7 +2,10 @@ import HeroImage from "../../assets/hero.png";
 import Buttons from "../../components/buttons";
 function Home() {
   return (
-    <section className="text-center flex flex-col gap-20 z-10 relative max-md:px-6 max-2xl:px-10 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:text-left max-w-7xl w-full mx-auto lg:items-center">
+    <section
+      className="text-center flex flex-col gap-20 z-10 relative max-md:px-6 max-2xl:px-10 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:text-left max-w-7xl w-full mx-auto lg:items-center"
+      id="home"
+    >
       <img
         src={HeroImage}
         alt=""

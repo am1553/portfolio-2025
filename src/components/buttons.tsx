@@ -21,26 +21,29 @@ const MenuBtn = ({
 };
 
 const LinkedInBtn = ({ className }: { className: string }) => (
-  <button
+  <a
     className={`flex items-center bg-primary text-on-primary rounded-full pl-6 pr-4 gap-2 h-10 text-label-small md:text-label-medium lg:text-label-large w-fit cursor-pointer ${className}`}
+    target="_blank"
+    href="https://www.linkedin.com/in/aryanmehta-dev"
   >
     <span>Connect on LinkedIn</span>
     <ChevronRightIcon
       style={{ fontSize: "18px" }}
       className="text-on-primary"
     />
-  </button>
+  </a>
 );
 const ViewProjectsBtn = ({ className }: { className: string }) => (
-  <button
+  <a
     className={`flex items-center bg-primary text-on-primary rounded-full pl-6 pr-4 gap-2 h-10 text-label-small md:text-label-medium lg:text-label-large w-fit cursor-pointer ${className}`}
+    href="#projects"
   >
     <span>View Projects</span>
     <ChevronRightIcon
       style={{ fontSize: "18px" }}
       className="text-on-primary"
     />
-  </button>
+  </a>
 );
 
 const Buttons = {
