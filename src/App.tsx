@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 const portal = document.getElementById("portal");
 
 function App() {
-  const [menuActive, setMenuActive] = React.useState(false);
+  const [menuActive] = React.useState(false);
 
   useEffect(() => {
     const body = document.getElementsByTagName("body")[0];
