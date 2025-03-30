@@ -1,4 +1,3 @@
-import React from "react";
 import Layout from "./Layout";
 import ManagerOne from "../assets/manager-one.jpeg";
 import QuoteIcon from "../assets/quote.png";

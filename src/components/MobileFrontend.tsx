@@ -1,4 +1,3 @@
-import React from "react";
 import Buttons from "./buttons";
 import MobileScreen from "./MobileScreen";
 import FinanceCard from "./FinanceCard";

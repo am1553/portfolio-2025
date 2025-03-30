@@ -5,7 +5,6 @@ import NavBar from "./components/NavBar";
 import { createPortal } from "react-dom";
 import Buttons from "./components/buttons";
 import Home from "./sections/home/Home";
-import Recommendations from "./sections/recommendations/Recommendations";
 import About from "./sections/about/About";
 import Projects from "./sections/projects/Projects";
 import Footer from "./components/Footer";

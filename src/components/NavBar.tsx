@@ -1,5 +1,3 @@
-import React from "react";
-
 function NavBar() {
   return (
     <div className="absolute inset-0 top-18 bg-gray-900/50 transition-opacity nav-bar z-20 md:hidden">

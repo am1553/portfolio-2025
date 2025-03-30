@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import PotIcon from "../assets/icon-pot.svg";
 function PotsSummary() {
   return (
