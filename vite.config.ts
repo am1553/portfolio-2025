@@ -5,4 +5,5 @@ export default defineConfig({
   build: {
     outDir: "build",
   },
+  base: "/portfolio-2025/",
 });
