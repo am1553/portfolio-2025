@@ -183,7 +183,7 @@ function CreateNoteCodeBlock() {
               <span className="text-[#D19A66]">{")"}</span>
               <span className="text-white">{";"}</span>
             </div>
-            <p className="">
+            <div className="">
               <span className="text-[#E06C75]">req</span>
               <span className="text-white">{"."}</span>
               <span className="text-[#E06C75]">locals</span>
@@ -205,7 +205,7 @@ function CreateNoteCodeBlock() {
                 <span className="text-[#61AFEF]">next{"()"}</span>
                 <span className="text-white">{";"}</span>
               </p>
-            </p>
+            </div>
           </div>
           <div>
             <p>
