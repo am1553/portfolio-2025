@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/am1553/portfolio-2025",
+  "homepage": "https://www.github.com/am1553/portfolio-2025",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
