@@ -75,9 +75,13 @@ function Projects() {
               className="max-w-sm w-fit rounded-2xl overflow-hidden shadow-md bg-white"
               key={project.title}
             >
-              <div className="h-54 rounded-2xl overflow-hidden shadow-md">
-                <img src={project.img} alt="" className="w-full" />
-              </div>
+              <div
+                className="h-54 rounded-2xl overflow-hidden shadow-md"
+                style={{
+                  backgroundImage: `url(${project.img})`,
+                  backgroundSize: "cover",
+                }}
+              ></div>
               <div className="py-6 px-4 flex flex-col gap-4">
                 <span className="text-title-large">{project.title}</span>
                 <p className="text-body-large opacity-60 flex-1">
